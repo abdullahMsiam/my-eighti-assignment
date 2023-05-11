@@ -6,9 +6,13 @@
     padding: 0px 20px;
 }
 
+.header h2:hover {
+    color: crimson;
+}
+
 .header-link a {
     color: black;
-    margin-left: 10px;
+    margin-left: 7px;
 }
 
 .header-link a:hover {
