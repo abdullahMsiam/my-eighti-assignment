@@ -18,3 +18,7 @@
 .header-link a:hover {
     color: crimson;
 }
+
+.header hr {
+    border: 1px solid gray;
+}
