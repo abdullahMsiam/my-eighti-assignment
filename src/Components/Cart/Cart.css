@@ -1,7 +1,26 @@
+.cart-container {
+    position: sticky;
+    top: 30px;
+}
+
 .time {
     text-align: center;
     padding: 10px;
     border-radius: 7px;
     border: 2px solid #6047EC;
     background-color: rgba(121, 99, 245, 0.626);
+}
+
+.book-mark {
+    background-color: rgb(162, 162, 162);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+@media screen and (max-width:580px) {
+    .cart-container {
+        position: static;
+    }
+
 }

@@ -3,4 +3,11 @@
     grid-template-columns: 2fr 1fr;
     gap: 25px;
     margin: 30px 30px;
+
+}
+
+@media screen and (max-width:580px) {
+    .library {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

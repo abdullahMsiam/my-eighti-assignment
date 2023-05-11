@@ -4,6 +4,7 @@ import Blog from '../Blog/Blog';
 import Cart from '../Cart/Cart';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Library = () => {
     const [blogs, setBlogs] = useState([]);
     const [time, setTime] = useState(0);
@@ -20,7 +21,7 @@ const Library = () => {
         setTime(newTime);
     }
 
-    const notify = () => toast("Wow so easy!");
+    const notify = () => toast("You can't add to bookmark more than one");
 
     const passTitleHandler = (title) => {
         let newTitle = [...blogTitle];
@@ -31,9 +32,7 @@ const Library = () => {
         else {
             notify();
         }
-
         setBlogTitle(newTitle);
-        // console.log(title);
     }
     return (
         <div className='library'>
@@ -44,7 +43,6 @@ const Library = () => {
                         blog={blog}
                         handledAddTime={handledAddTime}
                         passTitleHandler={passTitleHandler}
-                        notify={notify}
                     ></Blog>)
                 }
                 <ToastContainer />

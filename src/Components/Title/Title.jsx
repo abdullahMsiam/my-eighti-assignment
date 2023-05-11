@@ -1,10 +1,10 @@
 import React from 'react';
+import './Title.css'
 
 const Title = (props) => {
-    console.log(props.bk);
     return (
-        <div>
-            <h1>{props.bk}</h1>
+        <div className='title-name'>
+            <h3>{props.bk}</h3>
         </div >
     );
 };
