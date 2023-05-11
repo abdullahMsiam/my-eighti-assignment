@@ -7,6 +7,8 @@ const Blog = (props) => {
     const { id, img, author, time, title, authorImage } = props.blog;
     // console.log(author);
     const handledAddTime = props.handledAddTime;
+    const passTitleHandler = props.passTitleHandler;
+    const notify = props.notify;
     return (
         <div className='blog'>
             <div className='blog-image'>
@@ -18,11 +20,11 @@ const Blog = (props) => {
                     <div><h4>{author}</h4> <p>15 April (few days ago)</p></div>
                 </div>
                 <div>
-                    <p>{time} min read <button><FontAwesomeIcon icon={faBookmark} /></button> </p>
+                    <p>{time} min read <button onClick={() => passTitleHandler(title)}><FontAwesomeIcon icon={faBookmark} /></button> </p>
                 </div>
             </div>
             <h2>{title}</h2>
-            <button onClick={() => handledAddTime(time)}>Mark as read</button>
+            <button onClick={() => { handledAddTime(time), notify() }}>Mark as read</button>
         </div>
     );
 };
