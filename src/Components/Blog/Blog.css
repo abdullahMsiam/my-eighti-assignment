@@ -1,14 +1,19 @@
 .blog {
     margin-top: 20px;
     border-bottom: 1px solid gray;
+    padding-bottom: 20px;
 }
 
-.blog a {
+.blog button {
+    background-color: white;
+    border: none;
+    font-weight: 700;
+    color: blue;
     border-bottom: 1px solid blue;
 }
 
-.blog a:hover {
-    font-weight: 700;
+.blog button:hover {
+    font-weight: 720;
     border-bottom: 2px solid blue;
 }
 
@@ -23,17 +28,18 @@
     justify-content: space-between;
 }
 
-.blog-info a {
+.blog-info button {
     text-decoration: none;
     border-bottom: 0;
     color: black;
 }
 
-.blog-info a:hover {
+.blog-info button:hover {
     color: crimson;
+    border-bottom: 0;
 }
 
-.author-info h5 {
+.author-info h4 {
     margin: 0;
 }
 

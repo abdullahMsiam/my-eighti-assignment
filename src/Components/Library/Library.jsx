@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Library.css'
 import Blog from '../Blog/Blog';
+import Cart from '../Cart/Cart';
 const Library = () => {
     const [blogs, setBlogs] = useState([]);
+    const [time, setTime] = useState(0);
 
     useEffect(() => {
         fetch('db.json')
@@ -10,7 +12,10 @@ const Library = () => {
             .then(data => setBlogs(data))
     }, [])
 
-
+    const handledAddTime = (times) => {
+        const newTime = time + parseInt(times);
+        setTime(newTime);
+    }
     return (
         <div className='library'>
             <div>
@@ -18,12 +23,14 @@ const Library = () => {
                     blogs.map(blog => <Blog
                         key={blog.id}
                         blog={blog}
+                        handledAddTime={handledAddTime}
                     ></Blog>)
                 }
             </div>
             <div>
-                <h1>cart
-                </h1>
+                <Cart
+                    time={time}
+                ></Cart>
             </div>
         </div>
     );
